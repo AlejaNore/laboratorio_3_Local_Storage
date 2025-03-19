@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function guardarInfo() {
+            const infoNomTarea = document.getElementById("nomtarea").value;
+            const infoFechaTarea = document.getElementById("fechatarea").value;
+            const infoHoraTarea = document.getElementById("horatarea").value;
+            const infoDesTarea = document.getElementById("destarea").value;
+
+            localStorage.setItem("nomtarea", infoNomTarea);
+            localStorage.setItem("fechatarea", infoFechaTarea);
+            localStorage.setItem("horatarea", infoHoraTarea);
+            localStorage.setItem("destarea", infoDesTarea);
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <h3>Indice</h3>
+    <ol type="I" start="1">
+        <font face="ink free" size="3" color="blue">
+            <li><a href="#formulario" style="text-decoration: none;">Formularios</a></li>
+        </font>
+    </ol>
+
+    <section id="formulario">
+
+        <h1 align="center">FORMULARIO</h1>
+        <hr>
+        <!--li*<form action="/login/auth" method="get">-->
+        <!--<form action="/login/auth" method="get">-->
+        <!--<form onsubmit="guardarInfo(); return false ;">-->
+        <form onsubmit="guardarInfo(); return false ;">
+            <label for="nomtarea">Nombre tarea: </label>
+            <input type="text" id="nomtarea" name="nomtarea">
+
+            <br>
+
+            <label for="fechatarea">Fecha de la tarea: </label>
+            <input type="date" id="fechatarea" name="fechatarea">
+
+            <br>
+
+            <label for="horatarea">Hora de la tarea: </label>
+            <input type="time" id="horatarea" name="horatarea">
+
+            <br>
+
+            <label for="destarea">Descripción: </label>
+            <textarea name="msg" id="destarea" rows="15" cols="20"></textarea>
+
+            <br>
+
+            <input type="submit" value="Enviar">
+            
+        </form>
+
+        <br>
+        <a href="#">ir al inicio</a>
+    </section>
+
+
+    
+</body>
+</html>
