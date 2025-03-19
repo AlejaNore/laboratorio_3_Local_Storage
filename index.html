@@ -18,6 +18,18 @@
             localStorage.setItem("destarea", infoDesTarea);
         }
 
+        function leerInfo() {
+                const infoNomTarea = localStorage.getItem("nomtarea") ;
+                const infoFechaTarea  = localStorage.getItem("fechatarea") ;
+                const infoHoraTarea = localStorage.getItem("horatarea") ;
+                const infoDesTarea = localStorage.getItem("destarea") ;
+
+                document.getElementById("nomtarea").value = infoNomTarea ;
+                document.getElementById("fechatarea").value   = infoFechaTarea ;
+                document.getElementById("horatarea").value  = infoHoraTarea ;
+                document.getElementById("destarea").value  = infoDesTarea ;
+            }
+
     </script>
 
 
@@ -59,6 +71,8 @@
             <br>
 
             <input type="submit" value="Enviar">
+
+            <button onclick="leerInfo()">Leer</button>
             
         </form>
 
