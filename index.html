@@ -16,9 +16,10 @@
             localStorage.setItem("fechatarea", infoFechaTarea);
             localStorage.setItem("horatarea", infoHoraTarea);
             localStorage.setItem("destarea", infoDesTarea);
+           
         }
 
-        function leerInfo() {
+        function consultarInfo() {
             const infoNomTarea = localStorage.getItem("nomtarea") ;
             const infoFechaTarea  = localStorage.getItem("fechatarea") ;
             const infoHoraTarea = localStorage.getItem("horatarea") ;
@@ -77,9 +78,9 @@
 
             <br>
 
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Guardar">
 
-            <button onclick="leerInfo()">Leer</button>
+            <button onclick="consultarInfo()">Consultar</button>
 
             <input type="button" onclick="borrarInfo()" value="Borrar">
             
@@ -93,3 +94,5 @@
     
 </body>
 </html>
+
+<!--https://github.com/AlejaNore/laboratorio_3_Local_Storage.git-->
