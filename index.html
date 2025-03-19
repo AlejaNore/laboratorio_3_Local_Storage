@@ -19,16 +19,23 @@
         }
 
         function leerInfo() {
-                const infoNomTarea = localStorage.getItem("nomtarea") ;
-                const infoFechaTarea  = localStorage.getItem("fechatarea") ;
-                const infoHoraTarea = localStorage.getItem("horatarea") ;
-                const infoDesTarea = localStorage.getItem("destarea") ;
+            const infoNomTarea = localStorage.getItem("nomtarea") ;
+            const infoFechaTarea  = localStorage.getItem("fechatarea") ;
+            const infoHoraTarea = localStorage.getItem("horatarea") ;
+            const infoDesTarea = localStorage.getItem("destarea") ;
 
-                document.getElementById("nomtarea").value = infoNomTarea ;
-                document.getElementById("fechatarea").value   = infoFechaTarea ;
-                document.getElementById("horatarea").value  = infoHoraTarea ;
-                document.getElementById("destarea").value  = infoDesTarea ;
-            }
+            document.getElementById("nomtarea").value = infoNomTarea ;
+            document.getElementById("fechatarea").value   = infoFechaTarea ;
+            document.getElementById("horatarea").value  = infoHoraTarea ;
+            document.getElementById("destarea").value  = infoDesTarea ;
+        }
+
+        function borrarInfo() {
+            localStorage.removeItem("nomtarea") ;
+            localStorage.removeItem("fechatarea") ;
+            localStorage.removeItem("horatarea") ;
+            localStorage.removeItem("destarea") ;
+        }
 
     </script>
 
@@ -73,6 +80,8 @@
             <input type="submit" value="Enviar">
 
             <button onclick="leerInfo()">Leer</button>
+
+            <input type="button" onclick="borrarInfo()" value="Borrar">
             
         </form>
 
